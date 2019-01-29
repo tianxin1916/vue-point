@@ -47,7 +47,6 @@
            ```
   - 指令-双向数据绑定
     - <表单元素 v-model="变量"></表单元素>
-  - 计算属性-computed
   - 组件化(组件就是可被反复使用，带有特定功能的视图)
     - 组件的创建
       全局组件
@@ -74,21 +73,21 @@
        2.如果一个组件要渲染多个元素，将多个元素放在一个顶层标签中，比如div，form
        3.全局组件可以用在id为example的范围内的任何一个组件内部，直接调用可以：但是局部组件只能在父模板中直接调用
   - 自定义指令
-   - 创建和使用
-    ```
-     Vue.directive('change',{
-       bind(){
+    - 创建和使用
+      ```
+       Vue.directive('change',{
+         bind(){
          //首次调用
-       },
-       update(){
+         },
+         update(){
          //只要是有数据变化，都会调用
-       }，
-       unbind(){
+          }，
+         unbind(){
          //解绑
-       }
-     })
-     <any v-change="count"></any>
-    ```
+         }
+        })
+      <any v-change="count"></any>
+      ```
   - 自定义过滤器
     - 过滤器的创建和使用
      ```
@@ -209,12 +208,12 @@
         this.$parent得到父组件的实例
        ```
     -  兄弟组件通信
-      ```
-       1.var bus=new Vue();
-       2.接收方
-       bus.$on('eventName',()=>{})
-       3.发送方
-       bus.$emit('eventName',123)
-      ```
+       ```
+        1.var bus=new Vue();
+        2.接收方
+        bus.$on('eventName',()=>{})
+        3.发送方
+        bus.$emit('eventName',123)
+       ```
       
       

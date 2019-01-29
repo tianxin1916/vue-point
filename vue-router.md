@@ -115,6 +115,7 @@
        ,获取this.$route.query.plan
        注意：如果提供了path,params会被忽略，上述例子中的query并不属于这种情况，取而代之的是下面例子的做法，你需要提供路由的name
        或手写完整的带有参数的path
+      ------
        const userId=123
        router.push({name:'user',params:{userId}}); //-> /user/123
        router.push({path:`/user/${userId}`}) //->/user/123
@@ -125,7 +126,7 @@
        <!-- 注意前面 to 前要加：  -->
        <router-link :to="{name:'helloWorld',params:{id:456}}">Go to helloWorld123</router-link>
 
-     ```
+     ``` 
    - 命名路由
      ```
       routes:[
