@@ -172,8 +172,8 @@
           <any>{{myHandle}}</any>
        ```
   - 组件间通信
-    1. 父与子通信
-      ```
+    -  父与子通信
+       ```
        1.发送
          <son myName="zhangshan"></son>
        2.接受
@@ -181,34 +181,34 @@
         Vue.component('son',{
           props:['myName'],
           template:`<p>{{myName}}</p>`
-        })
-      ```
-    2. 子与父通信
-      ```
-       1.绑定
-        methods:{
-          handleEvent(){
+         })
+       ```
+    -  子与父通信
+        ```
+         1.绑定
+          methods:{
+           handleEvent(){
 
-          }
-        }
-        <son @customEvent="handleEvent"></son>
-       2.触发
-        子组件内部
-        this.$emit('customEvent',100)
-      ```
-    3. ref (reference 引用/参考 外号)
-      帮助在父组件中，得到子组件中的数据，方法
-      ```
-       1.指定ref属性
-       <son ref="mySon"></son>
-       2.根据ref得到子组件实列
-       this.$refs.mySon
-      ```
-    4. $parent
+           }
+         }
+         <son @customEvent="handleEvent"></son>
+         2.触发
+          子组件内部
+          this.$emit('customEvent',100)
+        ```
+    -  ref (reference 引用/参考 外号)
+       帮助在父组件中，得到子组件中的数据，方法
        ```
-       this.$parent得到父组件的实例
+        1.指定ref属性
+        <son ref="mySon"></son>
+        2.根据ref得到子组件实列
+        this.$refs.mySon
        ```
-    5. 兄弟组件通信
+    -  $parent
+       ```
+        this.$parent得到父组件的实例
+       ```
+    -  兄弟组件通信
       ```
        1.var bus=new Vue();
        2.接收方
